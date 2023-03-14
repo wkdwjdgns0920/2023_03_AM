@@ -13,6 +13,8 @@ public class ArticleController extends Controller {
 	private String command;
 	private String actionMethodName;
 
+	int lastArticleId = 3;
+
 	public ArticleController(Scanner sc) {
 		this.articles = new ArrayList<>();
 		this.sc = sc;
@@ -43,8 +45,6 @@ public class ArticleController extends Controller {
 			break;
 		}
 	}
-
-	int lastArticleId = 3;
 
 	private void doWrite() {
 		int id = lastArticleId + 1;
@@ -194,7 +194,7 @@ public class ArticleController extends Controller {
 	}
 
 	public void makeTestData() {
-		System.out.println("테스트를 위한 데이터를 생성합니다");
+		System.out.println("테스트를 위한 게시글 데이터를 생성합니다");
 		articles.add(new Article(1, Util.getNowDateTimeStr(), Util.getNowDateTimeStr(), "제목1", "제목1", 11));
 		articles.add(new Article(2, Util.getNowDateTimeStr(), Util.getNowDateTimeStr(), "제목2", "제목2", 22));
 		articles.add(new Article(3, Util.getNowDateTimeStr(), Util.getNowDateTimeStr(), "제목3", "제목3", 33));
