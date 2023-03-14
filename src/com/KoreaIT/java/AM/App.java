@@ -27,7 +27,7 @@ public class App {
 
 		articleController.makeTestData();
 		memberController.makeTestData();
-
+		
 		while (true) {
 			System.out.print("명령어 > ");
 			String command = sc.nextLine().trim();
