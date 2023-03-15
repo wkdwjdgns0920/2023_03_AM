@@ -123,10 +123,14 @@ public class ArticleController extends Controller {
 		}
 
 		foundArticle.hit++;
+		
+		List<Member> members = Container.memberDao.members;
+		Member member = members.get(id);
 
 		System.out.println("번호 : " + foundArticle.id);
 		System.out.println("작성날짜 : " + foundArticle.regDate);
 		System.out.println("수정날짜 : " + foundArticle.updateDate);
+		System.out.println("작성자 이름 : " + member.name);
 		System.out.println("작성자 : " + foundArticle.memberId);
 		System.out.println("제목 : " + foundArticle.title);
 		System.out.println("내용 : " + foundArticle.body);
